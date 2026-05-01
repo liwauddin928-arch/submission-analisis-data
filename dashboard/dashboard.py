@@ -134,8 +134,8 @@ def apply_chart_style(fig: plt.Figure, ax: plt.Axes) -> None:
 @st.cache_data(show_spinner="Memuat data...")
 def load_raw_data() -> tuple[pd.DataFrame, pd.DataFrame]:
     """Baca CSV mentah dari disk. Raise FileNotFoundError jika tidak ada."""
-    main_df  = pd.read_csv("main_data.csv")
-    delay_df = pd.read_csv("delay_analysis.csv")
+    main_df  = pd.read_csv("dashboard/main_data.csv")
+    delay_df = pd.read_csv("dashboard/delay_analysis.csv")
 
     date_cols_main  = ["order_delivered_customer_date"]
     date_cols_delay = ["order_delivered_customer_date", "order_estimated_delivery_date"]
